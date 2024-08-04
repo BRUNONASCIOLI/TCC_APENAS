@@ -3,24 +3,76 @@
 ## 🥸 Proposta TCC:
 
 ### 🦅 Introdução
-A crescente complexidade dos sistemas de automação industrial exige respostas rápidas e eficientes às mudanças contínuas no ambiente industrial. Historicamente, a lógica de controle em sistemas de automação era implementada por meio de circuitos elétricos, utilizando combinações de relés, temporizadores de came, sequenciadores de tambor e controladores de malha fechada dedicados. Esse método era extremamente complexo e demorado, e a verificação da correção da lógica de controle só podia ser realizada testando com sistemas reais.
+A crescente complexidade dos sistemas de automação industrial exige respostas rápidas e eficientes às mudanças contínuas no ambiente industrial. Uma solução para alguns desses problemas chegou com o advento dos controladores lógicos programáveis (CLPs) nas décadas seguintes, o que gerou uma grande evolução no contexto industrial. 
 
-Com o advento dos controladores lógicos programáveis (CLPs) nas décadas seguintes, a programação evoluiu significativamente. Nos primeiros CLPs, os programas eram escritos em linguagens proprietárias. Nos anos 1990, foi introduzida a lógica ladder, que se assemelha a um diagrama esquemático da lógica de relé física, facilitando o desenvolvimento de programas de automação de uso geral. Em 1993, foi publicada a primeira edição do padrão internacional para CLPs, IEC 61131-3, que definiu cinco linguagens de programação: lógica ladder (LD), texto estruturado (ST), lista de instruções (IL), diagrama de blocos funcionais (FBD) e a linguagem baseada em máquina de estados, Sequential Function Chart (SFC). Esse padrão também introduziu as unidades organizacionais de programação (POUs) – funções e blocos funcionais – que permitiram encapsular a lógica de controle e reutilizá-la em projetos futuros, melhorando significativamente a eficiência do design e desenvolvimento de software para CLPs.
+Porém com o advento dos CLPs nas indústrias, surgiram novas preocupações. Atualmente, um dos grandes obstáculos enfrentados pela indústria é o tempo consumido na programação e a dificuldade na reutilização de códigos, decorrentes da falta de modularidade e padronização. Nesse contexto, os paradigmas de programação são fundamentais para melhorar a eficiência e a eficácia da programação dos CLPs. Este trabalho de conclusão de curso propõe explorar três paradigmas de programação relevantes para os CLPs: a programação orientada a objetos (OOP), a programação orientada a serviços (SOA) e a programação baseada em componentes (CBD), destacando suas vantagens e desvantagens.
 
-No entanto, o tamanho físico e as funcionalidades das plantas de manufatura continuam a crescer, e o poder de processamento dos CLPs não consegue acompanhar essas demandas. Controlar esses sistemas complexos com um CLP centralizado muitas vezes não é viável. Para abordar as limitações da arquitetura do padrão IEC 61131-3, foi publicado em 2005 e revisado em 2012 o padrão IEC 61499, que auxilia no desenvolvimento de sistemas de automação distribuída.
+A programação orientada a objetos (OOP), introduzida na última edição da IEC 61131-3, encapsula a lógica de controle em objetos que combinam dados e métodos, facilitando a manutenção e escalabilidade dos sistemas. O design baseado em componentes (CBD), promovido pelo padrão IEC 61499, divide a lógica de controle em blocos funcionais reutilizáveis e independentes, permitindo maior flexibilidade e escalabilidade. A Arquitetura Orientada a Serviços (SOA) organiza a lógica de controle em serviços fracamente acoplados que interagem através de interfaces bem definidas, proporcionando alta flexibilidade e interoperabilidade, facilitando a integração e colaboração entre diferentes sistemas e organizações. Esses paradigmas visam gerenciar a complexidade crescente, promovendo uma programação mais eficiente, modular e adaptável.
 
-Nesse contexto, a programação orientada a objetos (OOP), introduzida na última edição da IEC 61131-3, visa aumentar a modularidade e a reutilização do código em sistemas de automação industrial. O OOP permite que a lógica de controle seja encapsulada em objetos, que são instâncias de classes que combinam dados e métodos. Essa abordagem facilita a manutenção e a escalabilidade dos sistemas, pois os objetos podem ser reutilizados e modificados independentemente. A motivação para o uso de OOP reside na necessidade de gerenciar a complexidade crescente dos sistemas de automação, proporcionando uma maneira estruturada e organizada de desenvolver software que pode ser facilmente entendido, mantido e expandido.
-
-O design baseado em componentes (CBD), promovido pelo padrão IEC 61499, oferece uma abordagem mais distribuída para o desenvolvimento de sistemas de automação. No CBD, a lógica de controle é dividida em blocos funcionais, que são componentes de software reutilizáveis e independentes. Cada bloco funcional pode ser configurado e combinado com outros para formar sistemas completos. Essa abordagem permite maior flexibilidade e escalabilidade, pois os componentes podem ser desenvolvidos, testados e implantados de forma independente. A motivação para o uso do CBD é a necessidade de criar sistemas de automação que possam ser rapidamente adaptados às mudanças nas condições de manufatura, bem como a capacidade de distribuir a lógica de controle por várias unidades de processamento para melhorar o desempenho e a confiabilidade.
-
-Na Arquitetura Orientada a Serviços (SOA), a lógica de controle é organizada em serviços, que são unidades de software fracamente acopladas que interagem através de interfaces bem definidas. Esses serviços podem ser distribuídos em diferentes dispositivos e plataformas, proporcionando alta flexibilidade e interoperabilidade. A principal motivação para o uso da SOA é a necessidade de integrar a descrição do processo de automação na lógica de controle, permitindo uma melhor compreensão do sistema como um todo e aumentando a produtividade dos designers. Além disso, a SOA facilita a colaboração entre diferentes sistemas e organizações, promovendo uma abordagem mais ágil e adaptável para a automação industrial.
-
-
+Ao considerar esses paradigmas no contexto das normas IEC 61131 e IEC 61499, podemos observar uma tendência em direção a uma maior modularidade, reusabilidade e flexibilidade na programação de CLPs.
 
 
 ### ✅ Objetivos
 
+Este trabalho tem como objetivo analisar os diferentes paradigmas de programação dos controladores lógicos programáveis (CLPs) e discutir suas vantagens e desvantagens, além de suas implicações práticas no controle de sistemas industriais. O estudo busca compreender como as abordagens modernas, como a programação orientada a objetos (OOP), o design baseado em componentes (CBD) e a arquitetura orientada a serviços (SOA), impactam positivamente a eficiência, flexibilidade, escalabilidade e manutenção dos sistemas de automação industrial. Além disso, pretende-se demonstrar os avanços proporcionados por esses paradigmas em comparação com as técnicas tradicionais utilizadas anteriormente, ilustrando os benefícios e melhorias obtidos na automação industrial moderna.
+
+### 🍰 Obejtivos Específicos
+
+1. Analisar a Programação Orientada a Objetos (OOP) em CLPs:
+
+    - Identificar as principais características da OOP aplicadas a CLPs;
+
+    - Avaliar as vantagens e desvantagens da OOP no contexto de sistemas de automação industrial;
+
+    - Examinar casos de estudo ou exemplos práticos de uso da OOP em projetos de automação;
+
+2. Explorar o Design Baseado em Componentes (CBD) em CLPs:
+
+    - Descrever como o CBD é implementado;
+
+    - Investigar os benefícios da modularidade e reutilização de blocos funcionais no CBD;
+
+    - Comparar a eficácia do CBD com métodos tradicionais de programação de CLPs;
+
+3. Investigar a Arquitetura Orientada a Serviços (SOA) em CLPs:
+
+    - Definir como a SOA é aplicada em sistemas de automação industrial;
+
+    - Analisar a interoperabilidade e flexibilidade proporcionadas pela SOA;
+
+    - Estudar a aplicação prática da SOA em ambientes industriais e os resultados obtidos;
+
+4. Comparar Paradigmas Modernos com Técnicas Tradicionais:
+
+    - Comparar a eficiência, flexibilidade, escalabilidade e manutenção entre os paradigmas modernos e as técnicas tradicionais de programação de CLPs;
+
+    - Identificar as melhorias e avanços proporcionados pelos paradigmas modernos;
+
+    - Avaliar os desafios e limitações de cada paradigma no contexto industrial;
+
+5. Avaliar as Implicações Práticas dos Paradigmas de Programação:
+
+    - Analisar como os paradigmas de programação impactam a produtividade e a qualidade dos sistemas de automação industrial;
+
+    - Examinar as implicações econômicas da adoção de paradigmas modernos;
+
+    - Investigar a aceitação e a adoção desses paradigmas na indústria atual;
+
+
 ### 🧐Metodologia
+
+Inicialmente, será realizada uma revisão bibliográfica sobre os paradigmas de programação de controladores lógicos programáveis (CLPs) e as normas IEC 61131 e IEC 61499, com o objetivo de identificar as técnicas e recursos necessários para a análise comparativa dos paradigmas. Em seguida, serão definidos os critérios de comparação, como modularidade, reutilização de código, flexibilidade, escalabilidade e manutenção, além da coleta de dados qualitativos e quantitativos sobre a aplicação prática dos paradigmas OOP, CBD e SOA.
+
+Posteriormente, serão selecionados e analisados casos práticos representativos que utilizem os paradigmas mencionados. Cada estudo de caso será descrito detalhadamente, incluindo o contexto do projeto, a implementação do paradigma de programação e os resultados obtidos. Com isso, será realizada uma análise dos benefícios e desafios enfrentados em cada estudo de caso, destacando as lições aprendidas.
+
+
+Finalmente, serão integrados os achados da revisão bibliográfica, do estudo comparativo e da análise de casos práticos na discussão e interpretação dos resultados. As principais conclusões serão sintetizadas em relação aos objetivos específicos, e serão propostas recomendações práticas para a adoção e implementação dos paradigmas de programação em CLPs.
+
+### ⏱️ Cronograma
+
+O presente trabalho será desenvolvido durante o período 2024.1, tendo início no mês de Julho e fim no mês de Outubro. Dessa forma, seguirá um cronograma preestabelecido das atividades.
+
+
 
 
 ## 📚📚 Orientado a objeto:
@@ -84,11 +136,11 @@ O estudo de caso usa um sistema de produção de calor (HPP) como mostrado na fi
     
     5. A água pressurizada no tanque da caldeira será fornecida ao cliente através da válvula de abastecimento Y305. Por fim, a água pode ser descarregada abrindo a válvula Y105
 
-![alt text](image.png)
+![alt text](imagens\image.png)
 
 No domínio da computação, SOA é apresentado em uma arquitetura em camadas de serviços compostos. Um conceito parecido pode ser ser aplicado no domínio da automação industrial.
 
-![alt text](image-1.png) 
+![alt text](imagens\image-1.png) 
 
 A camada inferior é a camada de controle, que consiste do sistema operacional e do ambiente de execução para os controladores.
 
@@ -106,7 +158,7 @@ Primeiramente, o projeto dos blocos de função da camada de serviços é aprese
 
 Neste caso, funções integradas como o evento cíclico FB (E_CYCLE), FB inversor (NOT), e acesso de E/S a fieldbus - Entradas Analógicas e Saídas Analógicas (FB_AI, FB_AO) e Entradas Digitais e Saídas Digitais (FB_DI, FB_DO) são implementadas na camada de serviços principais.
 
-![alt text](image-2.png)
+![alt text](imagens\image-2.png)
 
 Já a camada de serviços definidos por usuários para o sistema HPP possui quatro tipos de serviços: medição de sensor analógico (Service_AIMeasure), controle de atuador analógico (Service_AOControl), medição de sensor digital (Service_DIMeasure) e o controle de atuador digital (Service_DOControl).
 
@@ -114,7 +166,7 @@ Os blocos de função de medição analógico e digital fazem leituras de proxim
 
 Cada bloco de função de serviço de atuador recebe duas entradas: uma do nível superior (modo automático) e uma da Interface Homem-Máquina (HMI, modo manual).
 
-![alt text](image-3.png)
+![alt text](imagens\image-3.png)
 
 Na camada de processo, os serviços são agrupados por funcionalidades dentro do processo, controle de tanque (FB_TankControl), controle PID (FB_PIDControl), controle de aquecedor (FB_HeaterControl), controle de bomba (FB_PumpControl) e controle de válvula (FB_ValveControl).
 
@@ -124,7 +176,7 @@ O serviço de controle do PID lê os valores de medidas do serviço de medição
 
 Os serviços de controle do aquecedor, bomba e válvula checam que o valor de controle está dentro do range e produzem comandos de saída para os serviços de controle dos atuadores.
 
-![alt text](image-4.png)
+![alt text](imagens\image-4.png)
 
 Na camada superior, dois serviços são definidos: serviço de controle de sequência e serviço de intertravamento.
 
@@ -136,7 +188,7 @@ Finalmente, tem-se a visão geral da configuração do sistema HPP.
 
 Uma instância individual é criada para cada objeto devido à limitação do padrão IEC 61499: não há memória compartilhada, portanto, os dados não podem ser armazenados globalmente; cada entrada de dados só pode ser conectada a uma saída de dados, de modo que um serviço não pode ser compartilhado por múltiplas instâncias.
 
-![alt text](image-5.png)
+![alt text](imagens\image-5.png)
 
 ### Discussão 👀👀
 
@@ -191,16 +243,27 @@ SOA possui a melhor flexibilidade geral devido à interface configurável defini
 |**Hierarquia do Sistema**|Classes aninhadas|Componentes aninhados|Orquestração de serviço, composição|
 
 
+
+![alt text](imagens\image-6.png)
+
+![alt text](imagens\image-7.png)
+
+![alt text](imagens\image-8.png)
+
+A programação orientada a objetos (OOP), introduzida na última edição da IEC 61131-3, visa aumentar a modularidade e a reutilização do código em sistemas de automação industrial. O OOP permite que a lógica de controle seja encapsulada em objetos, que são instâncias de classes que combinam dados e métodos. Essa abordagem facilita a manutenção e a escalabilidade dos sistemas, pois os objetos podem ser reutilizados e modificados independentemente. A motivação para o uso de OOP reside na necessidade de gerenciar a complexidade crescente dos sistemas de automação, proporcionando uma maneira estruturada e organizada de desenvolver software que pode ser facilmente entendido, mantido e expandido.
+
+O design baseado em componentes (CBD), promovido pelo padrão IEC 61499, oferece uma abordagem mais distribuída para o desenvolvimento de sistemas de automação. No CBD, a lógica de controle é dividida em blocos funcionais, que são componentes de software reutilizáveis e independentes. Cada bloco funcional pode ser configurado e combinado com outros para formar sistemas completos. Essa abordagem permite maior flexibilidade e escalabilidade, pois os componentes podem ser desenvolvidos, testados e implantados de forma independente. A motivação para o uso do CBD é a necessidade de criar sistemas de automação que possam ser rapidamente adaptados às mudanças nas condições de manufatura, bem como a capacidade de distribuir a lógica de controle por várias unidades de processamento para melhorar o desempenho e a confiabilidade.
+
+Na Arquitetura Orientada a Serviços (SOA), a lógica de controle é organizada em serviços, que são unidades de software fracamente acopladas que interagem através de interfaces bem definidas. Esses serviços podem ser distribuídos em diferentes dispositivos e plataformas, proporcionando alta flexibilidade e interoperabilidade. A principal motivação para o uso da SOA é a necessidade de integrar a descrição do processo de automação na lógica de controle, permitindo uma melhor compreensão do sistema como um todo e aumentando a produtividade dos designers. Além disso, a SOA facilita a colaboração entre diferentes sistemas e organizações, promovendo uma abordagem mais ágil e adaptável para a automação industrial.
+
+
+
 ## 📓Documentação:
-- Service-Oriented Distributed Control
-Software Design for Process Automation Systems
+- [Service-Oriented Distributed Control Software Design for Process Automation Systems](/Artigos/Service-oriented%20distributed%20control%20software%20design%20for%20process%20automation%20system.pdf)
 
-- Object-Oriented approach to PLC software
-design for a manufacture machinery using
-IEC 61131-3 Norm Languages
+- [Object-Oriented approach to PLC software design for a manufacture machinery using IEC 61131-3 Norm Languages](/Artigos/Object-Oriented%20approach%20to%20PLC%20software%20design%20for%20a%20manufazture%20machinery%20using%20IEC%2061131-3%20Norm%20Languages.pdf)
 
-- An Object-Oriented Approach to an Agile Manufacturing Control
-System Design
+- [An Object-Oriented Approach to an Agile Manufacturing Control System Design](/Artigos/An%20Object-Oriented%20Approach%20to%20an%20Agile%20Manufacturing%20Control%20System%20Design.pdf)
 
 ## 
 
