@@ -136,7 +136,7 @@ O estudo de caso usa um sistema de produção de calor (HPP) como mostrado na fi
     
     5. A água pressurizada no tanque da caldeira será fornecida ao cliente através da válvula de abastecimento Y305. Por fim, a água pode ser descarregada abrindo a válvula Y105
 
-![alt text](imagens\image.png)
+![alt text](imagens/image.png)
 
 No domínio da computação, SOA é apresentado em uma arquitetura em camadas de serviços compostos. Um conceito parecido pode ser ser aplicado no domínio da automação industrial.
 
