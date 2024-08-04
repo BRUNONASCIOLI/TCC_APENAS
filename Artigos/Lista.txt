@@ -1,0 +1,20 @@
+Lido:
+
+  - Service-Oriented Distributed Control Software Design for Process Automation Systems (Bom artigo, da p pegar coisa)
+
+  - A Component-based design pattern for Improving Reusability of Automation Programs (+/-, é bom reler)
+
+  - An Object-Oriented Approach to an Agile Manufacturing Control System Design (Bom em certas partes, mas ta mais p um                                                                                  manual)
+
+  - Model-Driven design of Industrial Control Systems (N li tudo, mas fala mt sobre XML)   
+
+  - An Object-Oriented Approach to an Agile Manufacturing Control System Design (Básico, mas bom)
+
+  - Service-Oriented Architecture in Industrial Automation SystemsThe case of IEC 61499 A Review (Entendi NADA)
+
+
+Leituras:
+  -  An MDD Process for IEC 61131-based Industrial Automation Systems
+  -  Service-Oriented Architecture in Industrial Automation Systems - The case of IEC 61499: A Review
+  -  Service-Oriented Distributed Control Software Design for Process Automation Systems
+  -  Object oriented extensions of IEC 61131-3 as an enabling technology of software product lines
