@@ -7,7 +7,11 @@ A crescente complexidade dos sistemas de automação industrial exige respostas 
 
 Atualmente, um dos grandes obstáculos enfrentados pela indústria é o tempo consumido na programação e a dificuldade na reutilização de códigos, resultantes da falta de modularidade e padronização. Nesse contexto, os paradigmas de programação são fundamentais para melhorar a eficiência e a eficácia da programação dos CLPs. Este trabalho de conclusão de curso propõe explorar três paradigmas de programação relevantes para os CLPs: a programação orientada a objetos (OOP), a programação orientada a serviços (SOA) e a programação baseada em componentes (CBD), destacando suas vantagens e desvantagens [Young et al., 2001; Dai et al., 2014].
 
+<<<<<<< HEAD
 A programação orientada a objetos (OOP) encapsula a lógica de controle em objetos que combinam dados e métodos, facilitando a manutenção e a escalabilidade dos sistemas. O design baseado em componentes (CBD) divide a lógica de controle em blocos funcionais reutilizáveis e independentes, permitindo maior flexibilidade e escalabilidade. Por sua vez, a Arquitetura Orientada a Serviços (SOA) organiza a lógica de controle em serviços fracamente acoplados que interagem através de interfaces bem definidas, proporcionando alta flexibilidade e interoperabilidade, facilitando a integração e colaboração entre diferentes sistemas e organizações. Esses paradigmas visam gerenciar a complexidade crescente, promovendo uma programação mais eficiente, modular e adaptável [Dai et al., 2014; Bonfe e Fantuzzi, 2001].
+=======
+A programação orientada a objetos (OOP) encapsula a lógica de controle em objetos que combinam dados e métodos, facilitando a manutenção e escalabilidade dos sistemas. Já, o design baseado em componentes (CBD) divide a lógica de controle em blocos funcionais reutilizáveis e independentes, permitindo maior flexibilidade e escalabilidade. Por sua vez, a Arquitetura Orientada a Serviços (SOA) organiza a lógica de controle em serviços fracamente acoplados que interagem através de interfaces bem definidas, proporcionando alta flexibilidade e interoperabilidade, facilitando a integração e colaboração entre diferentes sistemas e organizações. Esses paradigmas visam gerenciar a complexidade crescente, promovendo uma programação mais eficiente, modular e adaptável.
+>>>>>>> 13cea24b50477e0abfe08802dd0afbd12a7c9cff
 
 Ao considerar esses paradigmas no contexto das normas IEC 61131 e IEC 61499, observamos uma tendência em direção a uma maior modularidade, reusabilidade e flexibilidade na programação de CLPs.
 
@@ -128,11 +132,11 @@ O estudo de caso usa um sistema de produção de calor (HPP) como mostrado na fi
     
     5. A água pressurizada no tanque da caldeira será fornecida ao cliente através da válvula de abastecimento Y305. Por fim, a água pode ser descarregada abrindo a válvula Y105
 
-![alt text](imagens\image.png)
+![alt text](imagens/image.png)
 
 No domínio da computação, SOA é apresentado em uma arquitetura em camadas de serviços compostos. Um conceito parecido pode ser ser aplicado no domínio da automação industrial.
 
-![alt text](imagens\image-1.png) 
+![alt text](imagens/image-1.png) 
 
 A camada inferior é a camada de controle, que consiste do sistema operacional e do ambiente de execução para os controladores.
 
@@ -150,7 +154,7 @@ Primeiramente, o projeto dos blocos de função da camada de serviços é aprese
 
 Neste caso, funções integradas como o evento cíclico FB (E_CYCLE), FB inversor (NOT), e acesso de E/S a fieldbus - Entradas Analógicas e Saídas Analógicas (FB_AI, FB_AO) e Entradas Digitais e Saídas Digitais (FB_DI, FB_DO) são implementadas na camada de serviços principais.
 
-![alt text](imagens\image-2.png)
+![alt text](imagens/image-2.png)
 
 Já a camada de serviços definidos por usuários para o sistema HPP possui quatro tipos de serviços: medição de sensor analógico (Service_AIMeasure), controle de atuador analógico (Service_AOControl), medição de sensor digital (Service_DIMeasure) e o controle de atuador digital (Service_DOControl).
 
@@ -158,7 +162,7 @@ Os blocos de função de medição analógico e digital fazem leituras de proxim
 
 Cada bloco de função de serviço de atuador recebe duas entradas: uma do nível superior (modo automático) e uma da Interface Homem-Máquina (HMI, modo manual).
 
-![alt text](imagens\image-3.png)
+![alt text](imagens/image-3.png)
 
 Na camada de processo, os serviços são agrupados por funcionalidades dentro do processo, controle de tanque (FB_TankControl), controle PID (FB_PIDControl), controle de aquecedor (FB_HeaterControl), controle de bomba (FB_PumpControl) e controle de válvula (FB_ValveControl).
 
@@ -168,7 +172,7 @@ O serviço de controle do PID lê os valores de medidas do serviço de medição
 
 Os serviços de controle do aquecedor, bomba e válvula checam que o valor de controle está dentro do range e produzem comandos de saída para os serviços de controle dos atuadores.
 
-![alt text](imagens\image-4.png)
+![alt text](imagens/image-4.png)
 
 Na camada superior, dois serviços são definidos: serviço de controle de sequência e serviço de intertravamento.
 
@@ -180,7 +184,7 @@ Finalmente, tem-se a visão geral da configuração do sistema HPP.
 
 Uma instância individual é criada para cada objeto devido à limitação do padrão IEC 61499: não há memória compartilhada, portanto, os dados não podem ser armazenados globalmente; cada entrada de dados só pode ser conectada a uma saída de dados, de modo que um serviço não pode ser compartilhado por múltiplas instâncias.
 
-![alt text](imagens\image-5.png)
+![alt text](imagens/image-5.png)
 
 ### Discussão 👀👀
 
@@ -275,11 +279,11 @@ SOA possui a melhor flexibilidade geral devido à interface configurável defini
 
 
 
-![alt text](imagens\image-6.png)
+![alt text](imagens/image-6.png)
 
-![alt text](imagens\image-7.png)
+![alt text](imagens/image-7.png)
 
-![alt text](imagens\image-8.png)
+![alt text](imagens/image-8.png)
 
 A programação orientada a objetos (OOP), introduzida na última edição da IEC 61131-3, visa aumentar a modularidade e a reutilização do código em sistemas de automação industrial. O OOP permite que a lógica de controle seja encapsulada em objetos, que são instâncias de classes que combinam dados e métodos. Essa abordagem facilita a manutenção e a escalabilidade dos sistemas, pois os objetos podem ser reutilizados e modificados independentemente. A motivação para o uso de OOP reside na necessidade de gerenciar a complexidade crescente dos sistemas de automação, proporcionando uma maneira estruturada e organizada de desenvolver software que pode ser facilmente entendido, mantido e expandido.
 
