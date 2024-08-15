@@ -7,11 +7,8 @@ A crescente complexidade dos sistemas de automação industrial exige respostas 
 
 Atualmente, um dos grandes obstáculos enfrentados pela indústria é o tempo consumido na programação e a dificuldade na reutilização de códigos, resultantes da falta de modularidade e padronização. Nesse contexto, os paradigmas de programação são fundamentais para melhorar a eficiência e a eficácia da programação dos CLPs. Este trabalho de conclusão de curso propõe explorar três paradigmas de programação relevantes para os CLPs: a programação orientada a objetos (OOP), a programação orientada a serviços (SOA) e a programação baseada em componentes (CBD), destacando suas vantagens e desvantagens [Young et al., 2001; Dai et al., 2014].
 
-<<<<<<< HEAD
 A programação orientada a objetos (OOP) encapsula a lógica de controle em objetos que combinam dados e métodos, facilitando a manutenção e a escalabilidade dos sistemas. O design baseado em componentes (CBD) divide a lógica de controle em blocos funcionais reutilizáveis e independentes, permitindo maior flexibilidade e escalabilidade. Por sua vez, a Arquitetura Orientada a Serviços (SOA) organiza a lógica de controle em serviços fracamente acoplados que interagem através de interfaces bem definidas, proporcionando alta flexibilidade e interoperabilidade, facilitando a integração e colaboração entre diferentes sistemas e organizações. Esses paradigmas visam gerenciar a complexidade crescente, promovendo uma programação mais eficiente, modular e adaptável [Dai et al., 2014; Bonfe e Fantuzzi, 2001].
-=======
-A programação orientada a objetos (OOP) encapsula a lógica de controle em objetos que combinam dados e métodos, facilitando a manutenção e escalabilidade dos sistemas. Já, o design baseado em componentes (CBD) divide a lógica de controle em blocos funcionais reutilizáveis e independentes, permitindo maior flexibilidade e escalabilidade. Por sua vez, a Arquitetura Orientada a Serviços (SOA) organiza a lógica de controle em serviços fracamente acoplados que interagem através de interfaces bem definidas, proporcionando alta flexibilidade e interoperabilidade, facilitando a integração e colaboração entre diferentes sistemas e organizações. Esses paradigmas visam gerenciar a complexidade crescente, promovendo uma programação mais eficiente, modular e adaptável.
->>>>>>> 13cea24b50477e0abfe08802dd0afbd12a7c9cff
+
 
 Ao considerar esses paradigmas no contexto das normas IEC 61131 e IEC 61499, observamos uma tendência em direção a uma maior modularidade, reusabilidade e flexibilidade na programação de CLPs.
 
