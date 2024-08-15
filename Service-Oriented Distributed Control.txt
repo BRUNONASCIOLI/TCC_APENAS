@@ -1,0 +1,96 @@
+Melhorias adquiridas com os paradigmas de programação no contexto de automação:
+
+ - Eficiência no desenvolvimento;
+ - Reutilização de códigos;
+ - Flexibilidade;
+ - Controle Distribuído;
+
+Geral:
+
+ - A OOP (Programação Orientada a Objetos), o CBD (Desenvolvimento Baseado em Componentes) e a SOA (Arquitetura Orientada a Serviços) foram todos criados para melhorar a reutilização e a eficiência da programação, introduzindo unidades de software reutilizáveis. Todos esses paradigmas de programação fornecem conceitos de encapsulamento para elementos de biblioteca;
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------
+OOP:
+
+ *Vantagens:
+   - Melhor estruturação do programa;
+   - Extensibilidade;
+   - Reutilização;
+
+   - Reutilização de código;
+   
+
+ *Características:
+   - A chave para OOP está no objeto. Os objetos são definidos como entidades de software que encapsulam dados e 
+métodos de processamento de dados;
+
+   - Normalmente, no contexto industrial, os objetos de software são relacionados a objetos físicos, conhecidos 
+como dispositivos, como sensores, transportadoras e máquinas;
+
+   - Esses dispositivos são controlados por sinais de controle que podem ser gerados por objetos associados diretamente, ou por uma cadeia de invocação mais complexa por outros objetos;
+
+   - Por exemplo, uma esteira pode ser ativada por um sinal de solicitação de start enviado por uma outra esteira a montante, quando ele começa a se mover.
+
+   - 
+
+ *Geral:
+
+   - Mira na reutilização de código;
+
+   - Os softwares de automação poderiam ser construídos por uma biblioteca de classes de dispositivos com relações especificadas entre dispositivos;
+
+   - O sistema poderia ser estendido facilmente com a inserção de novas instâncias de objetos;
+
+   - Se alguma funcionalidade de uma máquina precisa ser modificada ou um novo tipo de máquina é trazida para planta, as classes de dispositivos poderiam ser ajustadas rapidamente para atender aos novos requisitos usando herança e polimorfismos;
+
+   
+--------------------------------------------------------------------------------------------------------------
+
+
+CBD:
+ *Vantagens:
+   - Escalável;
+   - Reconfigurável;
+   - Tolerante a falha;
+ 
+ *Característcas:
+
+ *Geral:
+   
+   - Não está concentrada nas técnicas para derivação de componentes a parir de outros componentes, como a OOP, mas está focada na metodologia da criação, composição e execução dos componentes;
+
+   - Combina muito com os blocos de função da IEC 61499, onde cada componente seria modelado por um bloco de função;
+
+   - Os blocos de função de função seriam conectados entre si a partir de interfaces predefinidas (conexões de dados e eventos);
+
+   - Um componente também poderia ser composto por outros componentes, oq possibilita uma modelagem de estruturas hierárquicas que podem ajudar na reutilização de subsistemas inteiros;
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+SOA:
+ *Vantagens:
+
+ *Geral:
+   
+   - A SOA é um conjunto de componentes de software, cujas descrições das interfaces podem ser publicadas ou descobertas;
+
+   - Provedores e consumidores de serviços são fracamente acoplados para garantir o mínimo de dependência possível entre os serviços;
+  
+   - A interação entre os serviços é definida em um contrato de serviço, o qual pode ser publicado para o repositório de serviço;
+
+   - Para assegurar o acoplamento fraco, os blocos de função devem encapsular a maior parte das funcionalidades de serviço, que requerem apenas um mínimo de dados externos;
+
+   - Por exemplo, um pequeno sistema de manuseio de bagagens em um aeroporto consiste no serviço de controle de transportadores, no serviço de parada de emergência e no serviço de procedimento de check-in. Nesse caso, os sinais que precisam ser enviados entre os serviços são minimizados;
+
+   - A SOA (Arquitetura Orientada a Serviços) oferece a melhor flexibilidade geral devido à interface configurável definida pelo contrato de serviço separado entre as unidades de software;
+
+   - 
+  

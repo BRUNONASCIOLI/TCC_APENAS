@@ -1,0 +1,166 @@
+Geral:
+
+ - A modularização é comumente considerada uma abordagem promissora para enfrentar os desafios de ambientes de produção em mudança
+
+ - Os mercados globais de produtos químicos e farmacêuticos estão enfrentando desafios relacionados a ciclos de vida de produtos mais curtos e mercados altamente voláteis. Um tempo mais curto para o lançamento no mercado é cada vez mais importante [1]. Além disso, a previsão dos volumes demandados torna-se mais difícil devido a esse ambiente volátil;
+
+ - Os sistemas de produção atuais não conseguem atender a esses requisitos sem uma diminuição na qualidade do produto ou no volume de produção. Os sistemas de produção precisam ser adaptados a essa mudança. Uma abordagem promissora é a modularização das plantas de processo;
+
+ - A ideia básica da modularização é dividir um sistema de produção em diferentes módulos, cada um dos quais realiza pelo menos uma função de processo;
+
+ - A abordagem de modularização promete vantagens adicionais ao reduzir o esforço de engenharia, permitir a rápida integração de módulos e facilitar a ampliação ou redução em caso de mudança na demanda
+
+ - Em resumo, a modularização tem o potencial de reduzir a complexidade na engenharia, na manutenção e durante a fase de startup;
+
+ - Uma planta modular divide dispositivos, instrumentos e controle de processo em diferentes segmentos chamados módulos. Cada módulo realiza uma parte do processo e precisa ser controlado;
+
+
+
+
+ - Os módulos são adequados para múltiplos pontos de operação ao permitir diferentes configurações gerais. Se processos de produção conectam vários módulos, um sistema de controle superior é necessário;
+
+ - De acordo com [12], existem duas variantes diferentes de módulo. A diferença entre as variantes é se um controlador lógico programável (CLP) faz parte do módulo ou não;
+
+ - Se o módulo não incluir um CLP, o PCS influenciará o módulo diretamente através de uma I/O remota. Esse tipo de módulo pode ser usado para funções de processo simples;
+
+ - Sistemas de automação de processos modulares são compostos pelos CLPs dos módulos e pelo sistema de controle superior;
+
+ - Na lógica dos programas dos CLPs, a inteligência de cada módulo é implementada. Cada módulo é conectado proceduralmente ao seu predecessor e sucessor. Além disso, todos os módulos estão conectados radialmente ao backbone, que fornece e dispõe os dados, energia e infraestrutura de comunicação necessários
+
+ - O sistema de controle superior, que inclui a funcionalidade de orquestração dos módulos e uma interface para o operador, também está conectado ao backbone;
+
+ - Essa infraestrutura fornece dois níveis de controle:
+	
+	a) a automação básica e as funções básicas de processo de cada módulo são controladas pelo CLP do módulo;
+	
+	b) a gestão de receitas, funções mais complexas e a interface homem-máquina (IHM) estão incorporadas no sistema de controle superior;
+
+ 
+
+
+ - Além da infraestrutura para controle, é necessária uma nova estrutura funcional para a automação de processos modular;
+
+ - Portanto, a provisão de serviços como funções de processo encapsuladas é sugerida;
+ 
+ - Cada serviço realiza uma parte da função de controle dentro de um módulo. A granularidade de cada serviço é escolhida livremente;
+
+ - Para utilizar descrições abstratas dos serviços, é necessário que cada função e cada serviço possuam sua própria máquina de estados encapsulada;
+
+ - Para implementar um controle baseado em estados com serviços encapsulados, as informações geradas dentro dos módulos são necessárias no PCS de forma adequada para serem exibidas nas telas dos operadores, executar o controle e direcionar o processo;
+
+ - Cada serviço deve ser controlado por meio de mudanças de estado acionadas pelo PCS. Uma resposta de todos os serviços de cada módulo é necessária;
+
+ - A resposta deve conter o estado ativo de cada serviço, o tempo restante planejado do estado ativo e os possíveis estados seguintes, bem como os comandos pelos quais eles são acessíveis;
+
+ - A fonte dos comandos é o PCS, que deve orquestrar todos os serviços de todos os módulos para um processo global;
+
+
+
+
+
+----------------------------------------------------------------------------------
+
+SOA
+
+ *Geral:
+   
+   - As funções de processo são representadas por serviços encapsulados no nível de controle da pirâmide de automação;
+
+   - Em geral, a SOA (Arquitetura Orientada a Serviços) descreve um conjunto de componentes de caixa preta que fornecem serviços por meio de uma interface implementada usando serviços de comunicação;
+
+   - No contexto da automação de processos modular, os componentes de caixa preta representam os módulos, que realizam funções de processo ao encapsular serviços;
+
+   - O World Wide Web Consortium define um serviço como um serviço web que consiste em um conjunto de componentes que têm uma descrição de interface, são publicados, podem ser descobertos e executados [18]. Essa definição também se aplica, em nível abstrato, à automação de processos modular, porque as funções de processo podem ser invocadas e descobertas pelo PCS e operam após a invocação;
+
+
+ *OASIS Reference Model:
+   
+   - No modelo de referência, um serviço é definido como um '…mecanismo para permitir o acesso a uma ou mais capacidades…';
+
+   - O acesso é implementado por meio de uma interface de serviço, seguindo o padrão de solicitação-resposta. Cada serviço pode ter um efeito no mundo real;
+
+   - Esse modelo de referência define três conceitos fundamentais envolvidos em uma interação com serviços:
+	
+	a) Visibilidade:
+		
+		% Para realizar uma interação entre o provedor de serviços e o consumidor de serviços, ambos precisam 		'ver' um ao outro;
+
+		% Portanto, os requisitos de consciência, alcançabilidade e disposição precisam ser atendidos;
+		
+		% Consciência descreve o conhecimento de ambos, provedor e consumidor de serviços, sobre a existência da 	outra parte;
+
+		% Para alcançar isso, são necessárias descrições de serviços para que o consumidor saiba se o serviço é 	capaz de realizar a tarefa exigida;
+
+		% No contexto da automação de processos modular, uma tarefa é uma função de processo que é operada por um 	serviço de um módulo;
+
+		% A descrição do serviço é fornecida para todos os serviços de cada módulo em bloco no pacote de tipo de 	módulo (MTP);
+
+		% Além de estar ciente dos serviços e das partes envolvidas, cada parte deve estar disposta a interagir;
+
+		% A disposição descreve que cada entidade envolvida deseja cooperar;
+		
+		% No contexto da automação de processos 	modular, a disposição é geralmente assumida, mas é 		possível que um serviço não possa ser executado devido a 	requisitos de segurança funcional ou restrições de 	outros serviços;
+
+		% A acessibilidade no modelo de referência da OASIS descreve a possibilidade de comunicação entre o 	provedor e o consumidor de serviços;
+		
+		% A acessibilidade é assumida no contexto da automação de processos modular pela rede e pelos protocolos 	de comunicação, como o OPC-UA;
+		
+
+	b) Interação;
+
+		% O conceito de interação inclui a descrição do serviço e dois modelos principais;
+
+		% O modelo de informação caracteriza os dados possíveis que podem ser trocados entre o provedor de 	serviços e um consumidor;
+		
+		% O modelo é dividido em uma parte estrutural e uma parte semântica;
+
+		% A estrutura define o tipo e a forma dos dados em diferentes níveis estruturais;
+
+		% A parte semântica do modelo de informação descreve todas as informações necessárias para a interpretação 	dos dados;
+
+		% O modelo de comportamento contém todo o conhecimento sobre as ações realizadas dentro de cada serviço;
+
+		% Os aspectos temporais do processo também fazem parte do modelo de comportamento. Essas informações são 	armazenadas em dois modelos mais detalhados: o modelo de ação e o modelo de processo;
+
+		% Todas as ações específicas executadas nos serviços são definidas no modelo de ação;
+
+		% No contexto da automação de processos modular, ações são comandos para atuadores por serviço;
+
+		% O modelo de processo contém todas as relações e propriedades de cada ação. Essas informações do processo 	são de natureza temporal e mudam a cada alteração na ação;
+
+		% No modelo de referência, o modelo de processo também oferece espaço para definir relações e propriedades 	da orquestração de serviços;
+
+		% Para a automação de processos modular, a orquestração de serviços é altamente relevante, pois os 	serviços são executados em paralelo e/ou sequencialmente. Os serviços também terão relações entre si, o que pode 	ser ilustrado por um exemplo simples: se um enchimento deve ser operado diretamente a partir de um tanque, mas uma 	mistura deve ser realizada primeiro, então é necessária uma orquestração dos serviços 'enchimento' e 'mistura';
+
+
+	c) Efeito no mundo real:
+
+		% Efeitos no mundo real podem incluir três elementos diferentes: informações solicitadas, uma mudança no 	estado de entidades definidas, ou uma combinação de ambos;
+
+		% Os consumidores de serviços invocam um serviço por um desses três motivos;
+
+		% No contexto da automação de processos modular, podem ser imaginados serviços para exibição de valores 	que representam o resultado do primeiro efeito no mundo real mencionado. Como mencionado em [5], os serviços podem 	ser implementados por controle baseado em estados. Isso se adequa idealmente ao segundo efeito no mundo real;
+
+
+ *Implementation of service oriented architecture with function blocks:
+		
+		% Os serviços são vistos como elementos atômicos encapsulados que podem ser invocados por outros serviços 	ou por meio de mensagens de solicitação-resposta;
+
+		% Além disso, é necessário acessar dados de processo, como sinais de atuadores e sensores;
+
+		% A interconectividade entre todos os dispositivos envolvidos é necessária, mas os serviços não precisam 	ser alocados a hardware específico;
+
+		% As conexões entre blocos de função representam a comunicação, ou seja, a comunicação entre serviços;
+
+		% A comunicação é separada em tipos de mensagem e parâmetros, onde as mensagens são representadas por 	conexões de eventos e os parâmetros por conexões de dados, conforme descrito no padrão;
+
+		% A abordagem introduzida tem origem na automação industrial e decompõe as funcionalidades de fabricação 	até o nível mais básico, por exemplo, 'empurrar peça de trabalho';
+		
+		% Cada função básica é implementada como um serviço atômico. Para construir funcionalidades mais 	complexas, os serviços atômicos podem ser combinados e orquestrados pelo uso de uma entidade de coordenação 	central ou por coreografia autônoma de serviços;
+
+		% Uma entidade de controle de nível superior pode invocar um serviço por meio de mensagens, e o serviço 	invocado, por sua vez, invoca subserviços em uma ordem específica;
+
+		% A orquestração dos serviços é específica para a configuração dos serviços implementados no componente e 	é executada por uma máquina de estados específica na entidade de orquestração;
+
+
+

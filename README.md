@@ -3,60 +3,46 @@
 ## 🥸 Proposta TCC:
 
 ### 🦅 Introdução
-A crescente complexidade dos sistemas de automação industrial exige respostas rápidas e eficientes às mudanças contínuas no ambiente industrial. Uma solução para alguns desses problemas chegou com o advento dos controladores lógicos programáveis (CLPs) nas décadas seguintes, o que gerou uma grande evolução no contexto industrial. 
+A crescente complexidade dos sistemas de automação industrial exige respostas rápidas e eficientes às mudanças contínuas no ambiente industrial. Uma solução para alguns desses problemas surgiu com o advento dos controladores lógicos programáveis (CLPs), o que gerou uma grande evolução no contexto industrial [Dai et al., 2014].
 
-Porém com o advento dos CLPs nas indústrias, surgiram novas preocupações. Atualmente, um dos grandes obstáculos enfrentados pela indústria é o tempo consumido na programação e a dificuldade na reutilização de códigos, decorrentes da falta de modularidade e padronização. Nesse contexto, os paradigmas de programação são fundamentais para melhorar a eficiência e a eficácia da programação dos CLPs. Este trabalho de conclusão de curso propõe explorar três paradigmas de programação relevantes para os CLPs: a programação orientada a objetos (OOP), a programação orientada a serviços (SOA) e a programação baseada em componentes (CBD), destacando suas vantagens e desvantagens.
+Atualmente, um dos grandes obstáculos enfrentados pela indústria é o tempo consumido na programação e a dificuldade na reutilização de códigos, resultantes da falta de modularidade e padronização. Nesse contexto, os paradigmas de programação são fundamentais para melhorar a eficiência e a eficácia da programação dos CLPs. Este trabalho de conclusão de curso propõe explorar três paradigmas de programação relevantes para os CLPs: a programação orientada a objetos (OOP), a programação orientada a serviços (SOA) e a programação baseada em componentes (CBD), destacando suas vantagens e desvantagens [Young et al., 2001; Dai et al., 2014].
 
-A programação orientada a objetos (OOP), introduzida na última edição da IEC 61131-3, encapsula a lógica de controle em objetos que combinam dados e métodos, facilitando a manutenção e escalabilidade dos sistemas. O design baseado em componentes (CBD), promovido pelo padrão IEC 61499, divide a lógica de controle em blocos funcionais reutilizáveis e independentes, permitindo maior flexibilidade e escalabilidade. A Arquitetura Orientada a Serviços (SOA) organiza a lógica de controle em serviços fracamente acoplados que interagem através de interfaces bem definidas, proporcionando alta flexibilidade e interoperabilidade, facilitando a integração e colaboração entre diferentes sistemas e organizações. Esses paradigmas visam gerenciar a complexidade crescente, promovendo uma programação mais eficiente, modular e adaptável.
+A programação orientada a objetos (OOP) encapsula a lógica de controle em objetos que combinam dados e métodos, facilitando a manutenção e a escalabilidade dos sistemas. O design baseado em componentes (CBD) divide a lógica de controle em blocos funcionais reutilizáveis e independentes, permitindo maior flexibilidade e escalabilidade. Por sua vez, a Arquitetura Orientada a Serviços (SOA) organiza a lógica de controle em serviços fracamente acoplados que interagem através de interfaces bem definidas, proporcionando alta flexibilidade e interoperabilidade, facilitando a integração e colaboração entre diferentes sistemas e organizações. Esses paradigmas visam gerenciar a complexidade crescente, promovendo uma programação mais eficiente, modular e adaptável [Dai et al., 2014; Bonfe e Fantuzzi, 2001].
 
-Ao considerar esses paradigmas no contexto das normas IEC 61131 e IEC 61499, podemos observar uma tendência em direção a uma maior modularidade, reusabilidade e flexibilidade na programação de CLPs.
+Ao considerar esses paradigmas no contexto das normas IEC 61131 e IEC 61499, observamos uma tendência em direção a uma maior modularidade, reusabilidade e flexibilidade na programação de CLPs.
 
 
 ### ✅ Objetivos
 
-Este trabalho tem como objetivo analisar os diferentes paradigmas de programação dos controladores lógicos programáveis (CLPs) e discutir suas vantagens e desvantagens, além de suas implicações práticas no controle de sistemas industriais. O estudo busca compreender como as abordagens modernas, como a programação orientada a objetos (OOP), o design baseado em componentes (CBD) e a arquitetura orientada a serviços (SOA), impactam positivamente a eficiência, flexibilidade, escalabilidade e manutenção dos sistemas de automação industrial. Além disso, pretende-se demonstrar os avanços proporcionados por esses paradigmas em comparação com as técnicas tradicionais utilizadas anteriormente, ilustrando os benefícios e melhorias obtidos na automação industrial moderna.
+Este trabalho tem como objetivo analisar os diferentes paradigmas de programação dos CLPs e discutir suas vantagens e desvantagens, bem como suas implicações práticas no controle de sistemas industriais. O estudo busca compreender como as abordagens modernas, como a programação orientada a objetos (OOP), o design baseado em componentes (CBD) e a arquitetura orientada a serviços (SOA), impactam positivamente a eficiência, flexibilidade, escalabilidade e manutenção dos sistemas de automação industrial. Além disso, pretende-se demonstrar os avanços proporcionados por esses paradigmas em comparação com as técnicas tradicionais utilizadas anteriormente, ilustrando os benefícios e melhorias obtidos na automação industrial moderna.
 
 ### 🍰 Obejtivos Específicos
 
-1. Analisar a Programação Orientada a Objetos (OOP) em CLPs:
 
-    - Identificar as principais características da OOP aplicadas a CLPs;
+1. **Analisar a Programação Orientada a Objetos (OOP) em CLPs:**
+   - **Identificar as principais características da OOP aplicadas a CLPs:** Examinar como a OOP é implementada em CLPs, incluindo conceitos como encapsulamento, herança e polimorfismo.
+   - **Avaliar as vantagens e desvantagens da OOP no contexto de sistemas de automação industrial:** Analisar como a OOP contribui para a eficiência, flexibilidade e manutenção dos sistemas, bem como suas limitações.
+   - **Examinar casos de estudo ou exemplos práticos de uso da OOP em projetos de automação:** Apresentar exemplos reais onde a OOP foi aplicada com sucesso, destacando benefícios e desafios enfrentados.
 
-    - Avaliar as vantagens e desvantagens da OOP no contexto de sistemas de automação industrial;
+2. **Analisar o Design Baseado em Componentes (CBD) em CLPs:**
+   - **Identificar as principais características do CBD aplicadas a CLPs:** Investigar como o CBD organiza a lógica de controle em blocos funcionais reutilizáveis e independentes.
+   - **Avaliar as vantagens e desvantagens do CBD no contexto de sistemas de automação industrial:** Considerar como o CBD melhora a modularidade e a reutilização, assim como possíveis dificuldades na sua aplicação.
+   - **Examinar casos de estudo ou exemplos práticos de uso do CBD em projetos de automação:** Fornecer exemplos concretos onde o CBD foi utilizado, discutindo os resultados e lições aprendidas.
 
-    - Examinar casos de estudo ou exemplos práticos de uso da OOP em projetos de automação;
+3. **Analisar a Arquitetura Orientada a Serviços (SOA) em CLPs:**
+   - **Identificar as principais características da SOA aplicadas a CLPs:** Explorar como a SOA organiza a lógica de controle em serviços fracamente acoplados e interage através de interfaces bem definidas.
+   - **Avaliar as vantagens e desvantagens da SOA no contexto de sistemas de automação industrial:** Avaliar como a SOA proporciona flexibilidade e interoperabilidade, e suas limitações em ambientes industriais.
+   - **Examinar casos de estudo ou exemplos práticos de uso da SOA em projetos de automação:** Analisar exemplos reais de implementação da SOA, destacando os benefícios obtidos e os desafios encontrados.
 
-2. Explorar o Design Baseado em Componentes (CBD) em CLPs:
+4. **Comparar Paradigmas Modernos com Técnicas Tradicionais:**
+   - **Comparar a eficiência, flexibilidade, escalabilidade e manutenção entre os paradigmas modernos e as técnicas tradicionais de programação de CLPs:** Avaliar como os paradigmas modernos superam ou mantêm as técnicas tradicionais em termos de desempenho e manutenção.
+   - **Identificar as melhorias e avanços proporcionados pelos paradigmas modernos:** Detalhar as inovações que cada paradigma moderno trouxe em relação às práticas anteriores.
+   - **Avaliar os desafios e limitações de cada paradigma no contexto industrial:** Considerar os problemas potenciais e as restrições de implementação de cada abordagem moderna.
 
-    - Descrever como o CBD é implementado;
-
-    - Investigar os benefícios da modularidade e reutilização de blocos funcionais no CBD;
-
-    - Comparar a eficácia do CBD com métodos tradicionais de programação de CLPs;
-
-3. Investigar a Arquitetura Orientada a Serviços (SOA) em CLPs:
-
-    - Definir como a SOA é aplicada em sistemas de automação industrial;
-
-    - Analisar a interoperabilidade e flexibilidade proporcionadas pela SOA;
-
-    - Estudar a aplicação prática da SOA em ambientes industriais e os resultados obtidos;
-
-4. Comparar Paradigmas Modernos com Técnicas Tradicionais:
-
-    - Comparar a eficiência, flexibilidade, escalabilidade e manutenção entre os paradigmas modernos e as técnicas tradicionais de programação de CLPs;
-
-    - Identificar as melhorias e avanços proporcionados pelos paradigmas modernos;
-
-    - Avaliar os desafios e limitações de cada paradigma no contexto industrial;
-
-5. Avaliar as Implicações Práticas dos Paradigmas de Programação:
-
-    - Analisar como os paradigmas de programação impactam a produtividade e a qualidade dos sistemas de automação industrial;
-
-    - Examinar as implicações econômicas da adoção de paradigmas modernos;
-
-    - Investigar a aceitação e a adoção desses paradigmas na indústria atual;
+5. **Avaliar as Implicações Práticas dos Paradigmas de Programação:**
+   - **Analisar como os paradigmas de programação impactam a produtividade e a qualidade dos sistemas de automação industrial:** Examinar o impacto dos paradigmas na eficiência operacional e na qualidade dos produtos e processos industriais.
+   - **Examinar as implicações econômicas da adoção de paradigmas modernos:** Avaliar os custos e benefícios econômicos associados à implementação de novos paradigmas de programação.
+   - **Investigar a aceitação e a adoção desses paradigmas na indústria atual:** Analisar como os paradigmas modernos estão sendo recebidos e implementados pelas empresas e profissionais do setor industrial.
 
 
 ### 🧐Metodologia
@@ -93,7 +79,13 @@ O sistema poderia ser facilmente extendido com a inserção de mais instâncias 
 
 
 
+
+
 ### 💻Estudo de caso
+
+
+
+
 
 
 
@@ -216,12 +208,51 @@ Aplicar o paradigma SOA pode trazer benefícios substanciais para o design de so
 
 A abordagem baseada em componente não está  interessada com as técnicas de derivação dos componentes a partir de outros componentes, mas está focada nas metodologias de criação, composição e execução dos componentes.
 
+Em vez de construir um sistema do zero, a abordagem baseada em componentes (CBD) facilita o desenvolvimento do sistema utilizando elementos de sistema previamente desenvolvidos. Ela incentiva e possibilita o desenvolvimento de sistemas ao construir e reutilizar experiências e conhecimentos anteriores.
+
+Essa abordagem (CBD) parte da premissa de que "existe uma quantidade suficiente de semelhança em muitos grandes sistemas de software para justificar o desenvolvimento de componentes reutilizáveis que exploram e satisfazem essa semelhança
+
+Desenvolver sistemas a partir de componentes existentes oferece muitos benefícios para desenvolvedores e usuários, como aumento da funcionalidade, usabilidade e eficiência, além de melhorar a manutenibilidade, a confiabilidade e reduzir os custos de desenvolvimento.
+
 A norma IEC 61499 se encaixa perfeitamente no conceito de design baseado em componente, com um bloco de função modelando um componente. Esses blocos são conectados entre si por interfaces predefinidas (conexão de eventos e dados).
 
 Um componente pode ser composto por outros componentes, o que possibilita a modelagem de estruturas hierárquicas que ajudam na reutilização do projeto de subsistemas inteiros, como o subsistema de triagem que consiste em máquinas de raio-x e leitores automáticos de etiquetas.
 
+### 👌 Definições: 
+
+- Componente: Um componente é uma unidade autônoma que consiste no dispositivo de automação (por exemplo, atuador, sensor) com seu próprio hardware de computação (processador, memória, interface de comunicação, interface eletrônica com o dispositivo de automação) e software de controle (programas de aplicação, sistema operacional e protocolo de comunicação).
+
+- Visões de um componente:
+    - Física: Um componente é composto por um microprocessador, eletrônica de interface(condicionar e traduzir os sinais de controle de saída do controlador para o dispositivo de automação e os sinais de entrada do dispositivo para o controlador) e o dispositivo de automação (Atuador).
+
+    ![alt text](image.png)
+
+A abordagem baseada em componentes desacopla efetivamente o desenvolvimento de componentes do desenvolvimento de sistemas. O desenvolvimento de componentes se concentra principalmente em definir o comportamento de controle abstrato do componente (o que fazer) e implementar as funcionalidades de controle (como fazer).
+
+Por outro lado, o principal objetivo do desenvolvimento de sistemas é definir a situação ou condição em que o componente pode invocar sua função de controle (quando fazer), com base na descrição abstrata do componente (o que fazer).
+
+Os integradores de sistemas podem especificar e desenvolver a aplicação do sistema interligando os componentes sem conhecer a implementação interna do componente. Isso permite que eles se concentrem no desenvolvimento da aplicação sem precisar se preocupar com os detalhes de implementação de baixo nível.
+
+
+### 🤯 Artigo
+
+Uma das características chaves para software de automação distribuída é a modularidade. Uma organização modular do software mira na reutilização de componentes de projeto para projeto, atingindo uma redução de custos no desenvolvimento.
+
+Um componente de software pode requerer um ou mais  dados ou sinais controle de outros componentes. Esse processo de mapeamento é referido como  configuração de componente de software. Finalmente, um componente pode invocar internamente um ou mais componentes.
+
+No entanto, as variáveis de dados necessárias de outros componentes devem ser passadas como parâmetros para into/out desse componente de software.
+
+Essa estrutura aninhada pode criar links ocultos entre módulos reutilizáveis. Por outro lado, nem todos os componentes de software definidos em uma aplicação podem ser necessários em outra. É um desafio determinar quais componentes de software precisam ser portados devido às dependências entre esses módulos e as estruturas aninhadas.
+
+Além disso, os componentes de software podem precisar serem modificados, pois algumas entradas/saídas podem não existir no programa de destino.
+
+No artigo usado como base para esse estudo, é proposto uma solução para esses problemas.
+
 ### 💻Estudo de caso
 
+O artigo usado como base para o estudo afirma que o *design* baseado em componente mira na melhoria da reutilização de código e redução do tempo de redesenvolvimento.
+
+O estudo de caso faz o uso desse *design* em um sistema de gerenciamento de bagagem em um aeroporto real.
 
 
 
@@ -265,6 +296,8 @@ Na Arquitetura Orientada a Serviços (SOA), a lógica de controle é organizada 
 
 - [An Object-Oriented Approach to an Agile Manufacturing Control System Design](/Artigos/An%20Object-Oriented%20Approach%20to%20an%20Agile%20Manufacturing%20Control%20System%20Design.pdf)
 
+- [A Component-based Distributed Control System
+for Assembly Automation](\Artigos\Baseada em componente\A component-based distributed control system for assembly automation.pdf)
 ## 
 
 
